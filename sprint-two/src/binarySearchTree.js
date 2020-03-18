@@ -1,9 +1,8 @@
 var BinarySearchTree = function(value) {
-    this.storage = {value: value, left: null, right:null};
+    this.storage = {value: value, left: null, right: null};
 };
 
 BinarySearchTree.prototype.insert = function(value) {
-    var toStore = {value: value, left: null, right: null}
     if(value > this.storage.value) {
         if(this.right === null){
             this.right = new Node(value);
@@ -26,7 +25,9 @@ BinarySearchTree.prototype.contains = function() {
 BinarySearchTree.prototype.depthFirstLog = function() {
 
 }
-
+var Node = function(value) {
+    return {value: value, left: null, right: null}
+}
 /*
  * Complexity: What is the time complexity of the above functions?
  */
